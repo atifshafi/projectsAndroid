@@ -1,0 +1,60 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/party_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pizza" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/party_img"
+        android:text="Pizza Art"
+        android:fontFamily="cursive"
+        android:paddingLeft="90dp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:background="#6E8B3D"
+        />
+
+    <TextView
+        android:id="@+id/statement_text"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_alignRight="@id/party_img"
+        android:layout_alignBottom="@id/party_img"
+        android:layout_marginRight="91dp"
+        android:layout_marginBottom="257dp"
+        android:background="#6E8B3D"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="20dp"
+        android:text="Checkout the best pizza in the town!"
+        android:textColor="@android:color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_alignRight="@id/party_img"
+        android:layout_alignBottom="@id/party_img"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="180dp"
+        android:background="#84254A"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:text="Address: 1666 Duthie Ave \n#604-444-9124"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+
+</RelativeLayout>
