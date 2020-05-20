@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -20,17 +20,17 @@
             android:layout_width="169dp"
             android:layout_height="150dp"
             android:layout_toRightOf="@id/qm_img"
+            android:text="@string/welcome_title"
             android:textSize="35sp"
-            android:textStyle="bold"
-            android:text="Welcome to Movie Quiz App!" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/q1_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Question # 1"
             android:layout_below="@id/qm_img"
+            android:layout_marginLeft="10dp"
+            android:text="@string/question_1"
             android:textColor="@android:color/black"
             android:textSize="22sp" />
 
@@ -46,7 +46,7 @@
             android:layout_marginRight="10dp"
             android:layout_toEndOf="@id/qm_img"
             android:layout_toRightOf="@id/qm_img"
-            android:text="Score: "
+            android:text="@string/score"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
@@ -73,11 +73,11 @@
             android:layout_below="@id/q1_num"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Name a film which got 17 nominations at the Oscars"
+            android:gravity="center_horizontal"
+            android:text="@string/q1_full"
             android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:gravity="center_horizontal" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/q1_text_ans"
@@ -92,10 +92,10 @@
             android:id="@+id/q2_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/q1_text_ans"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Question # 2"
-            android:layout_below="@id/q1_text_ans"
+            android:text="@string/question_2"
             android:textColor="@android:color/black"
             android:textSize="22sp" />
 
@@ -106,63 +106,66 @@
             android:layout_below="@id/q2_num"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Who has won the most number of Oscars in his/her career?"
+            android:gravity="center_horizontal"
+            android:text="@string/q2_full"
             android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:gravity="center_horizontal" />
+            android:textSize="18sp" />
 
-        <RadioButton android:id="@+id/radio_q2_op1"
+        <RadioGroup
+            android:id="@+id/groupradio_q2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/q2_text"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Di Caprio"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            android:orientation="horizontal">
 
-        <RadioButton android:id="@+id/radio_q2_op2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/q2_text"
-            android:layout_toRightOf="@id/radio_q2_op1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Walt Disney"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_q2_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q2_op1"
+                android:textSize="12sp" />
 
-        <RadioButton android:id="@+id/radio_q2_op3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/q2_text"
-            android:layout_toRightOf="@id/radio_q2_op2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Tom Hanks"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_q2_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q2_op2"
+                android:textSize="12sp" />
 
-        <RadioButton android:id="@+id/radio_q2_op4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/q2_text"
-            android:layout_toRightOf="@id/radio_q2_op3"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Meryl Streep"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_q2_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q2_op3"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/radio_q2_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q2_op4"
+                android:textSize="12sp" />
+
+        </RadioGroup>
 
         <TextView
             android:id="@+id/q3_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/groupradio_q2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Question # 3"
-            android:layout_below="@id/radio_q2_op1"
+            android:text="@string/question_3"
             android:textColor="@android:color/black"
             android:textSize="22sp" />
 
@@ -173,56 +176,60 @@
             android:layout_below="@id/q3_num"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Which of the following are directed by Christopher Nolan?"
+            android:gravity="center_horizontal"
+            android:text="@string/q3_full"
             android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:gravity="center_horizontal" />
+            android:textSize="18sp" />
 
-        <CheckBox android:id="@+id/checkbox_q3_op1"
+        <CheckBox
+            android:id="@+id/checkbox_q3_op1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/q3_text"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Batman: The Dark Knight"
-            android:onClick="onCheckboxClicked"/>
+            android:onClick="onCheckboxClicked"
+            android:text="@string/cb_1" />
 
-        <CheckBox android:id="@+id/checkbox_q3_op2"
+        <CheckBox
+            android:id="@+id/checkbox_q3_op2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/checkbox_q3_op1"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:text="Minority Report"
-            android:onClick="onCheckboxClicked"/>
+            android:onClick="onCheckboxClicked"
+            android:text="@string/cb_2" />
 
-        <CheckBox android:id="@+id/checkbox_q3_op3"
+        <CheckBox
+            android:id="@+id/checkbox_q3_op3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/checkbox_q3_op2"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:text="Inception"
-            android:onClick="onCheckboxClicked"/>
+            android:onClick="onCheckboxClicked"
+            android:text="@string/cb_3" />
 
-        <CheckBox android:id="@+id/checkbox_q3_op4"
+        <CheckBox
+            android:id="@+id/checkbox_q3_op4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/checkbox_q3_op3"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:text="Tenet"
-            android:onClick="onCheckboxClicked"/>
+            android:onClick="onCheckboxClicked"
+            android:text="@string/cb_4" />
 
         <TextView
             android:id="@+id/q4_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/checkbox_q3_op4"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Question # 4"
-            android:layout_below="@id/checkbox_q3_op4"
+            android:text="@string/question_4"
             android:textColor="@android:color/black"
             android:textSize="22sp" />
 
@@ -233,77 +240,71 @@
             android:layout_below="@id/q4_num"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Which film won best pictures award in the Oscars in 2020?"
+            android:gravity="center_horizontal"
+            android:text="@string/q4_full"
             android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:gravity="center_horizontal" />
+            android:textSize="18sp" />
 
-        <RadioButton android:id="@+id/radio_q4_op1"
+        <RadioGroup
+            android:id="@+id/groupradio_q4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/q4_text"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Parasite"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            android:orientation="horizontal">
 
-        <RadioButton android:id="@+id/radio_q4_op2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/q4_text"
-            android:layout_toRightOf="@id/radio_q4_op1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Joker"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_q4_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q4_op1"
+                android:textSize="12sp" />
 
-        <RadioButton android:id="@+id/radio_q4_op3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/q4_text"
-            android:layout_toRightOf="@id/radio_q4_op2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="1917"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_q4_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q4_op2"
+                android:textSize="12sp" />
 
-        <RadioButton android:id="@+id/radio_q4_op4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/q4_text"
-            android:layout_toRightOf="@id/radio_q4_op3"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="JoJo Rabbit"
-            android:textSize="12sp"
-            android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_q4_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q4_op3"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/radio_q4_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/rb_q4_op4"
+                android:textSize="12sp" />
+
+        </RadioGroup>
 
         <Button
-            android:id="@+id/submit"
+            android:id="@+id/btn_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/radio_q4_op4"
-            android:layout_marginLeft="85dp"
+            android:layout_below="@id/groupradio_q4"
+            android:layout_marginStart="155dp"
+            android:layout_marginLeft="155dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="15dp"
-            android:onClick="teamA_add_goal"
-            android:text="Submit" />
+            android:onClick="submit"
+            android:text="@string/submit" />
 
-        <Button
-            android:id="@+id/reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/radio_q4_op4"
-            android:layout_toRightOf="@id/submit"
-            android:layout_marginLeft="65dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="15dp"
-            android:onClick="teamA_add_goal"
-            android:text="Reset" />
 
     </RelativeLayout>
 </ScrollView>

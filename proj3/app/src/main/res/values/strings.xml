@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Quize App</string>
+    <string name="welcome_title">Welcome to Movie Quiz App!</string>
+    <string name="question_1">Question # 1</string>
+    <string name="score">Score:</string>
+    <string name="q1_full">Name a film which got 17 nominations at the Oscars</string>
+    <string name="question_2">Question # 2</string>
+    <string name="q2_full">Who has won the most number of Oscars in his/her career?</string>
+    <string name="rb_q2_op1">Di Caprio</string>
+    <string name="rb_q2_op2">Walt Disney</string>
+    <string name="rb_q2_op3">Tom Hanks</string>
+    <string name="rb_q2_op4">Meryl Streep</string>
+    <string name="question_3">Question # 3</string>
+    <string name="q3_full">Which of the following are directed by Christopher Nolan?</string>
+    <string name="cb_1">Batman: The Dark Knight</string>
+    <string name="cb_2">Minority Report</string>
+    <string name="cb_3">Inception</string>
+    <string name="cb_4">Tenet</string>
+    <string name="question_4">Question # 4</string>
+    <string name="q4_full">Which film won best pictures award in the Oscars in 2020?</string>
+    <string name="rb_q4_op1">Parasite</string>
+    <string name="rb_q4_op2">Joker</string>
+    <string name="rb_q4_op3">1917</string>
+    <string name="rb_q4_op4">JoJo Rabbit</string>
+    <string name="submit">Submit</string>
 </resources>
