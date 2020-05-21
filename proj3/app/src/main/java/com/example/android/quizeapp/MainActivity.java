@@ -2,14 +2,14 @@ package com.example.android.quizeapp;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
-
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -150,8 +150,11 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void display(int number) {
-        TextView scoreTextView = (TextView) findViewById(R.id.score_num);
-        scoreTextView.setText("" + number);
+        Toast toast = Toast.makeText(MainActivity.this,
+                "Score: " + number, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 0);
+        toast.show();
+
     }
 
 }

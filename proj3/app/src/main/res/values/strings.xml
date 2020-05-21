@@ -2,7 +2,6 @@
     <string name="app_name">Quize App</string>
     <string name="welcome_title">Welcome to Movie Quiz App!</string>
     <string name="question_1">Question # 1</string>
-    <string name="score">Score:</string>
     <string name="q1_full">Name a film which got 17 nominations at the Oscars</string>
     <string name="question_2">Question # 2</string>
     <string name="q2_full">Who has won the most number of Oscars in his/her career?</string>

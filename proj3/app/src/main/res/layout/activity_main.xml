@@ -35,38 +35,6 @@
             android:textSize="22sp" />
 
         <TextView
-            android:id="@+id/score_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/qm_img"
-            android:layout_marginStart="21dp"
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="-28dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_toEndOf="@id/qm_img"
-            android:layout_toRightOf="@id/qm_img"
-            android:text="@string/score"
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/score_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/qm_img"
-            android:layout_marginStart="85dp"
-            android:layout_marginLeft="85dp"
-            android:layout_marginTop="-28dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_toEndOf="@id/qm_img"
-            android:layout_toRightOf="@id/qm_img"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
-
-        <TextView
             android:id="@+id/q1_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
