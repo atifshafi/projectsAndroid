@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -33,53 +34,29 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Find the View that shows the numbers category
-        TextView numbers = (TextView) findViewById(R.id.playlist_text);
-
-        // Set a click listener on that View
-        numbers.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent numbersIntent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(numbersIntent);
-            }
-        });
-
-
-        // Create a list of words
+        // Create a list of songs
         ArrayList<Song> songs = new ArrayList<Song>();
 
-        songs.add(new Song("Perfect","Divide"));
-        songs.add(new Song("Bibia Be Ye Ye","Divide"));
-        songs.add(new Song("Shape of You","Divide"));
-        songs.add(new Song("Thinking Out Loud","x"));
-        songs.add(new Song("Bad","Bad"));
-        songs.add(new Song("Perfect","Divide"));
-        songs.add(new Song("Bibia Be Ye Ye","Divide"));
-        songs.add(new Song("Shape of You","Divide"));
-        songs.add(new Song("Thinking Out Loud","x"));
-        songs.add(new Song("Bad","Bad"));
-        songs.add(new Song("Perfect","Divide"));
-        songs.add(new Song("Bibia Be Ye Ye","Divide"));
-        songs.add(new Song("Shape of You","Divide"));
-        songs.add(new Song("Thinking Out Loud","x"));
-        songs.add(new Song("Bad","Bad"));
-        songs.add(new Song("Perfect","Divide"));
-        songs.add(new Song("Bibia Be Ye Ye","Divide"));
-        songs.add(new Song("Shape of You","Divide"));
-        songs.add(new Song("Thinking Out Loud","x"));
-        songs.add(new Song("Bad","Bad"));
-
-//        words.add("two");
-//        words.add("three");
-//        words.add("four");
-//        words.add("five");
-//        words.add("six");
-//        words.add("seven");
-//        words.add("eight");
-//        words.add("nine");
-//        words.add("ten");
+        songs.add(new Song("Perfect", "Divide"));
+        songs.add(new Song("Bibia Be Ye Ye", "Divide"));
+        songs.add(new Song("Shape of You", "Divide"));
+        songs.add(new Song("Thinking Out Loud", "x"));
+        songs.add(new Song("Bad", "Bad"));
+        songs.add(new Song("I want it that way", "Millennium"));
+        songs.add(new Song("Call", "Millennium"));
+        songs.add(new Song("Shape of heart", "Millennium"));
+        songs.add(new Song("TLarger than life", "Backstreet Back"));
+        songs.add(new Song("Dangerous", "Dangerous"));
+        songs.add(new Song("Thriller", "Thriller"));
+        songs.add(new Song("Jam", "Dangerous"));
+        songs.add(new Song("Why You Wanna Trip on Me", "Dangerous"));
+        songs.add(new Song("In the Closet", "Dangerous"));
+        songs.add(new Song("Heal the world", "Dangerous"));
+        songs.add(new Song("Black or white", "Dangerous"));
+        songs.add(new Song("Lose yourself", "8 miles"));
+        songs.add(new Song("Lucky You", "Kamikaze"));
+        songs.add(new Song("Greatest", "Kamikaze"));
+        songs.add(new Song("The Ringer", "Kamikaze"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
@@ -90,65 +67,46 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        // activity_now_playing.xml layout file.
+        final ListView listView = (ListView) findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(Adapter);
-    }
 
 
-
-
-        // Find the View with song's details
-        TextView family = (TextView) findViewById(R.id.song_view);
+        // Find the View for Now Playing
+        TextView now_playing = (TextView) findViewById(R.id.now_playing_text);
 
         // Set a click listener on that View
-        family.setOnClickListener(new View.OnClickListener() {
+        now_playing.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the family category is clicked on.
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                Intent nowPlayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
 
                 // Start the new activity
-                startActivity(familyIntent);
+                startActivity(nowPlayingIntent);
             }
         });
 
-//        // Find the View that shows the colors category
-//        TextView colors = (TextView) findViewById(R.id.colors);
-//
-//        // Set a click listener on that View
-//        colors.setOnClickListener(new View.OnClickListener() {
-//            // The code in this method will be executed when the colors category is clicked on.
-//            @Override
-//            public void onClick(View view) {
-//                // Create a new intent to open the {@link ColorsActivity}
-//                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
-//
-//                // Start the new activity
-//                startActivity(colorsIntent);
-//            }
-//        });
-//
-//        // Find the View that shows the phrases category
-//        TextView phrases = (TextView) findViewById(R.id.phrases);
+        // Find the View that shows the list of songs category
+        final ListView song = (ListView) findViewById(R.id.list);
 
-        // Set a click listener on that View
-//        phrases.setOnClickListener(new View.OnClickListener() {
-//            // The code in this method will be executed when the phrases category is clicked on.
-//            @Override
-//            public void onClick(View view) {
-//                // Create a new intent to open the {@link PhrasesActivity}
-//                Intent phrasesIntent = new Intent(MainActivity.this, PhraseActivity.class);
-//
-//                // Start the new activity
-//                startActivity(phrasesIntent);
-//            }
-//        });
+        // Set a click listener on that View. Needs to be 'Item' to interact with ListView object types
+        song.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                // Create a new intent to open the {@link ColorsActivity}
+                Intent nowPlayingIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
+                // Start the new activity
+                startActivity(nowPlayingIntent);
+            }
+        });
     }
+}
 
