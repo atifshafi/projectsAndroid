@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // Create a list of songs
         ArrayList<Song> songs = new ArrayList<Song>();
 
-        songs.add(new Song("Perfect", "Divide"));
+        songs.add(new Song("Perfect", "Divide", R.drawable.music300));
         songs.add(new Song("Bibia Be Ye Ye", "Divide"));
         songs.add(new Song("Shape of You", "Divide"));
         songs.add(new Song("Thinking Out Loud", "x"));
