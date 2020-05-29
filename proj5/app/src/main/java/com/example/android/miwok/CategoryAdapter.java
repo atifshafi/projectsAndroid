@@ -32,11 +32,11 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new NumbersFragment();
+            return new BeachFragment();
         } else if (position == 1) {
             return new HikeFragment();
         } else if (position == 2) {
-            return new ColorsFragment();
+            return new RestaurantFragment();
         } else {
             return new PhrasesFragment();
         }

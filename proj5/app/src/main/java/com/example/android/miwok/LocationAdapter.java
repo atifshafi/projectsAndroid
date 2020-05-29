@@ -27,22 +27,22 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * {@link HikeAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
- * based on a data source, which is a list of {@link Hike} objects.
+ * {@link LocationAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
+ * based on a data source, which is a list of {@link Location} objects.
  */
-public class HikeAdapter extends ArrayAdapter<Hike>  {
+public class LocationAdapter extends ArrayAdapter<Location>  {
 
-    /** Resource ID for the background color for this list of words */
+    /** Resource ID for the background color for this list of locations */
     private int mColorResourceId;
 
     /**
-     * Create a new {@link HikeAdapter} object.
+     * Create a new {@link LocationAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param hikes is the list of {@link Hike}s to be displayed.
      * @param colorResourceId is the resource ID for the background color for this list of hikes
      */
-    public HikeAdapter(Context context, ArrayList<Hike> words, int colorResourceId) {
+    public LocationAdapter(Context context, ArrayList<Location> words, int colorResourceId) {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
@@ -57,35 +57,55 @@ public class HikeAdapter extends ArrayAdapter<Hike>  {
         }
 
         // Get the {@link Word} object located at this position in the list
-        Hike currentHike = getItem(position);
+        Location currentLocation = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID hike_name_text_view.
-        TextView hikeNameTextView = (TextView) listItemView.findViewById(R.id.hike_name_text_view);
+        TextView locationNameTextView = (TextView) listItemView.findViewById(R.id.location_name_text_view);
         // Get the hike location name of the currentHike object and set this text on
         // the Hike TextView.
-        hikeNameTextView.setText(currentHike.getHikeName());
+        locationNameTextView.setText(currentLocation.getLocationName());
 
 
         // Find the TextView in the list_item.xml layout with the ID hike_address_text_view.
-        TextView hikeAddressTextView = (TextView) listItemView.findViewById(R.id.hike_address_text_view);
+        TextView locationAddressTextView = (TextView) listItemView.findViewById(R.id.location_address_text_view);
         // Get the address of the hike's of the currentHike object and set this text on
         // the Hike TextView.
-        hikeAddressTextView.setText(currentHike.getHikeAddress());
+        locationAddressTextView.setText(currentLocation.getLocationAddress());
 
 
         // Find the TextView in the list_item.xml layout with the ID hike_address_text_view.
-        TextView hikeDifficultyTextView = (TextView) listItemView.findViewById(R.id.hike_difficulty_text_view);
+        TextView locationDescriptionTextView = (TextView) listItemView.findViewById(R.id.location_description_text_view);
         // Get the address of the hike's of the currentHike object and set this text on
         // the Hike TextView.
-        hikeDifficultyTextView.setText(currentHike.getDifficulty());
+        locationDescriptionTextView.setText(currentLocation.getLocationDescription());
+
+
+        // Find the TextView in the list_item.xml layout with the ID of the difficulty View.
+        TextView difficultyView = (TextView) listItemView.findViewById(R.id.location_difficulty_text_view);
+        // Check if an image is provided for this word or not
+        if (currentLocation.hasDifficulty()) {
+            // If an image is available, display the provided image based on the resource ID
+            difficultyView.setText(currentLocation.getDifficulty());
+            // Make sure the view is visible
+            difficultyView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
+            difficultyView.setVisibility(View.GONE);
+        }
 
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        imageView.setImageResource(currentHike.getImageResourceId());
-
-        // Make sure the view is visible
-        imageView.setVisibility(View.VISIBLE);
+        // Check if an image is provided for this word or not
+        if (currentLocation.hasImage()) {
+            // If an image is available, display the provided image based on the resource ID
+            imageView.setImageResource(currentLocation.getImageResourceId());
+            // Make sure the view is visible
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
+            imageView.setVisibility(View.GONE);
+        }
 
 
         // Set the theme color for the list item
