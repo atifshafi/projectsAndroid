@@ -27,22 +27,22 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * {@link WordAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
- * based on a data source, which is a list of {@link Word} objects.
+ * {@link HikeAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
+ * based on a data source, which is a list of {@link Hike} objects.
  */
-public class WordAdapter extends ArrayAdapter<Word>  {
+public class HikeAdapter extends ArrayAdapter<Hike>  {
 
     /** Resource ID for the background color for this list of words */
     private int mColorResourceId;
 
     /**
-     * Create a new {@link WordAdapter} object.
+     * Create a new {@link HikeAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
-     * @param words is the list of {@link Word}s to be displayed.
-     * @param colorResourceId is the resource ID for the background color for this list of words
+     * @param hikes is the list of {@link Hike}s to be displayed.
+     * @param colorResourceId is the resource ID for the background color for this list of hikes
      */
-    public WordAdapter(Context context, ArrayList<Word> words, int colorResourceId) {
+    public HikeAdapter(Context context, ArrayList<Hike> words, int colorResourceId) {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
@@ -57,32 +57,36 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         }
 
         // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
+        Hike currentHike = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
-        // Get the Miwok translation from the currentWord object and set this text on
-        // the Miwok TextView.
-        miwokTextView.setText(currentWord.getMiwokTranslation());
+        // Find the TextView in the list_item.xml layout with the ID hike_name_text_view.
+        TextView hikeNameTextView = (TextView) listItemView.findViewById(R.id.hike_name_text_view);
+        // Get the hike location name of the currentHike object and set this text on
+        // the Hike TextView.
+        hikeNameTextView.setText(currentHike.getHikeName());
 
-        // Find the TextView in the list_item.xml layout with the ID default_text_view.
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
-        // Get the default translation from the currentWord object and set this text on
-        // the default TextView.
-        defaultTextView.setText(currentWord.getDefaultTranslation());
+
+        // Find the TextView in the list_item.xml layout with the ID hike_address_text_view.
+        TextView hikeAddressTextView = (TextView) listItemView.findViewById(R.id.hike_address_text_view);
+        // Get the address of the hike's of the currentHike object and set this text on
+        // the Hike TextView.
+        hikeAddressTextView.setText(currentHike.getHikeAddress());
+
+
+        // Find the TextView in the list_item.xml layout with the ID hike_address_text_view.
+        TextView hikeDifficultyTextView = (TextView) listItemView.findViewById(R.id.hike_difficulty_text_view);
+        // Get the address of the hike's of the currentHike object and set this text on
+        // the Hike TextView.
+        hikeDifficultyTextView.setText(currentHike.getDifficulty());
+
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        // Check if an image is provided for this word or not
-        if (currentWord.hasImage()) {
-            // If an image is available, display the provided image based on the resource ID
-            imageView.setImageResource(currentWord.getImageResourceId());
-            // Make sure the view is visible
-            imageView.setVisibility(View.VISIBLE);
-        } else {
-            // Otherwise hide the ImageView (set visibility to GONE)
-            imageView.setVisibility(View.GONE);
-        }
+        imageView.setImageResource(currentHike.getImageResourceId());
+
+        // Make sure the view is visible
+        imageView.setVisibility(View.VISIBLE);
+
 
         // Set the theme color for the list item
         View textContainer = listItemView.findViewById(R.id.text_container);
@@ -91,7 +95,7 @@ public class WordAdapter extends ArrayAdapter<Word>  {
         // Set the background color of the text container View
         textContainer.setBackgroundColor(color);
 
-        // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
+        // Return the whole list item layout (containing 3 TextViews) so that it can be shown in
         // the ListView.
         return listItemView;
     }
