@@ -1,9 +1,8 @@
 <h1>Description</h1>
-<img width="800" height="400" src="https://photos.app.goo.gl/eLhvs1yED7Gr7h5c6" style="max-width:100%;">
+<img width="800" height="400" src="https://lh3.googleusercontent.com/pw/ACtC-3deLcGNrLTaQiqg4hAOwtG-fRS7XaWMekXC24IqxeOeEhie1pI1KXDavu3quHIaMe1iqCkbPDapijXcvCKYyDIPIXy6w-PHhEgfHTOd9m5MlPQrb3zznrxjV1I5wj5pO3BIGXlVdX5STKZbDDdGpmTHKw=w333-h597-no?authuser=0" style="max-width:100%;">
 <p></p>
 A single screen app to show information of a business
 <p></p>
-<p>Link to the site: https://globetrotterslive.herokuapp.com</p>
 
 <h2>Technologies Used</h2>
 
