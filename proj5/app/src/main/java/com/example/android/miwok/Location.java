@@ -22,35 +22,49 @@ package com.example.android.miwok;
 
 public class Location {
 
-    /**location (name)*/
+    /**
+     * location (name)
+     */
     private String mLocationName;
 
-    /**location (address)*/
+    /**
+     * location (address)
+     */
     private String mLocationAddress;
 
-    /** location (description)*/
+    /**
+     * location (description)
+     */
     private String mLocationDescription;
 
-    /** Difficulty of the hike */
+    /**
+     * Difficulty of the hike
+     */
     private String mDifficulty = NO_DIFFICULTY_PROVIDED;
 
-    /** Constant value that represents no difficulty associated with it*/
+    /**
+     * Constant value that represents no difficulty associated with it
+     */
     private static final String NO_DIFFICULTY_PROVIDED = "N/A";
 
-    /** Image resource ID for the location */
+    /**
+     * Image resource ID for the location
+     */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    /** Constant value that represents no image was provided for this location */
+    /**
+     * Constant value that represents no image was provided for this location
+     */
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
      * Create a new Location object.
      *
-     * @param mLocationName is the name of the location of the hiking area
-     * @param mLocationAddress is the address of the location of the hiking area
+     * @param mLocationName        is the name of the location of the hiking area
+     * @param mLocationAddress     is the address of the location of the hiking area
      * @param mLocationDescription is the description of the location
-     * @param mDifficulty is the difficulty of the hike
-     * @param mImageResourceId is the resource ID for the image file associated with this location
+     * @param mDifficulty          is the difficulty of the hike
+     * @param mImageResourceId     is the resource ID for the image file associated with this location
      */
 
     public Location(String locationName, String locationAddress, String locationDescription, int imageResourceId, String difficulty) {
@@ -65,10 +79,10 @@ public class Location {
     /**
      * Create a new Location object.
      *
-     * @param mLocationName is the name of the location of the hiking area
-     * @param mLocationAddress is the address of the location of the hiking area
+     * @param mLocationName        is the name of the location of the hiking area
+     * @param mLocationAddress     is the address of the location of the hiking area
      * @param mLocationDescription is the description of the location
-     * @param mImageResourceId is the resource ID for the image file associated with this location
+     * @param mImageResourceId     is the resource ID for the image file associated with this location
      */
 
     public Location(String locationName, String locationAddress, String locationDescription, int imageResourceId) {
@@ -82,8 +96,8 @@ public class Location {
     /**
      * Create a new Location object.
      *
-     * @param mLocationName is the name of the location of the hiking area
-     * @param mLocationAddress is the address of the location of the hiking area
+     * @param mLocationName        is the name of the location of the hiking area
+     * @param mLocationAddress     is the address of the location of the hiking area
      * @param mLocationDescription is the description of the location
      */
 
@@ -92,7 +106,6 @@ public class Location {
         mLocationAddress = locationAddress;
         mLocationDescription = locationDescription;
     }
-
 
     /**
      * Get the  name of the location.

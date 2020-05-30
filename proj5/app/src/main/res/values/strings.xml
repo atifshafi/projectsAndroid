@@ -28,6 +28,73 @@
     <!-- Category name for hikes [CHAR LIMIT=20] -->
     <string name="category_hikes">Hikes</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- List of data for 'Beach' [CHAR LIMIT=20] -->
+    <string name="beach_location_1_name">Kitsilano Beach</string>
+    <string name="beach_location_1_address">2278 W 4th Ave, Vancouver</string>
+    <string name="beach_location_1_description">"If Vancouver is \"Hollywood North,\" then Kitsilano Beach, known as \"Kits Beach\" to locals, is our Venice Beach. Buff and bronzed bodies are sure to make their rounds, but don't be worry, you're sure to fit in somewhere among the mix of joggers, stroller-pushing families, sun-worshippers and your everyday loungers. Grassy patches above the tide line are perfect for tossing the disc, the tennis courts are always popular, and the beach attracts volleyball players from all over the city. And don't forget Kits Pool where kids and adults can splash away the day in an outdoor, heated salt-water pool with a wrap-around view of the city, ocean and mountains. It's almost three times the size of an Olympic pool."</string>
+
+    <string name="beach_location_2_name">English Bay Beach</string>
+    <string name="beach_location_2_address">Beach Ave, Vancouver, BC V6C 3C1</string>
+    <string name="beach_location_2_description">Overlooking the eponymous English Bay, English Bay Beach offers an oceanside sanctuary in the otherwise busy West End of downtown Vancouver. With Stanley Park to one side, the hustle and bustle of downtown life on the other, and the Stanley Park Seawall running right along it, English Bay Beach is a lively beach with plenty of people watching. If you are staying downtown, English Bay Beach is one of the easiest of Vancouver\'s beaches to access by foot, bike, or public transit. On a blazing summer day, it sometimes feels like half of the city is at English Bay Beach, and finding a spot to set out a towel or picnic blanket can get a little competitive. Arrive early, or be prepared to make new friends. There are plenty of reasons to visit in the winter months, too—one in particular is the Polar Bear Swim. For many Vancouverites, this traditional dip in not-so-warm waters is the preferred way to ring in the New Year. Up for the challenge?</string>
+
+    <string name="beach_location_3_name">Jericho Beach</string>
+    <string name="beach_location_3_address">Point Grey Rd, Vancouver, BC V6R 1B5</string>
+    <string name="beach_location_3_description">Jericho Beach is a lovely stretch of sandy oceanfront between the Kitsilano and West Point Grey neighborhoods—but it\'s so much more than that. It\'s home to some of Vancouver\'s posher facilities, like the members-only Royal Vancouver Yacht Club and Jericho Tennis Club, as well as tennis courts that are open to the public. While Vancouver\'s beaches can be enjoyed from shore or by taking a dip in the ocean, one of the most exciting ways to experience them is to get way out in the water. Jericho Beach hosts the non-profit Jericho Sailing Centre, where anyone can access sailing, windsurfing, stand up paddleboarding, and skimboarding lessons and rentals. The adjacent park area features a network of winding trails—the ideal place for a dog walk or trail run. Just keep your eyes on Fido—there is a considerable rabbit population in the area that might spark a spirited chase.</string>
+
+    <!-- List of data for 'Hikes' [CHAR LIMIT=20] -->
+    <string name="hike_location_1_name">Grouse Mountain</string>
+    <string name="hike_location_1_address">26400 Nancy Greene Way</string>
+    <string name="hike_location_1_description">Just 15 minutes from downtown, Vancouver\'s premier attraction offers the perfect destination for a truly rewarding and memorable experience.</string>
+    <string name="hike_location_1_difficulty">"Difficulty: Hard"</string>
+
+    <string name="hike_location_2_name">Cypress Provincial Park</string>
+    <string name="hike_location_2_address">6000 Cypress Bowl Rd, West Vancouver</string>
+    <string name="hike_location_2_description">On clear days, the summit of this hike offers unparalleled views of Howe Sound. Even on overcast days, you\’ll feel like a conqueror above the clouds. The trail first follows ski runs with steep and rocky sections, before heading into a pretty forest. Continue along before gaining some elevation over a steep set of switchbacks. The forest eventually thins out before you reach St. Mark\'s Summit. Note: hikers will not find clear signage for St. Mark\'s Summit; it is a lookout located along the Howe Sound Crest Trail. However, the Summit is marked with a sign post, so you won\'t miss it.</string>
+    <string name="hike_location_2_difficulty">Difficulty: Moderate</string>
+
+    <string name="hike_location_3_name">Seymour Provincial Park</string>
+    <string name="hike_location_3_address">6400 Nancy Greene Way</string>
+    <string name="hike_location_3_description">You’ll be greeted with a stunning view of Metro Vancouver at the top of Dog Mountain. Although it’s a glorious sight any time of day, in our opinion, the sparkling city is most striking at night. However, the trail can be muddy, slippery, rocky and rooted, so if you do venture out for a night hike, don’t forget your headlamp! In winter, Dog Mountain can be done on snowshoes. But in our opinion, it\'s pretty miserable after rainfall or during spring melt.</string>
+    <string name="hike_location_3_difficulty">Difficulty: Easy</string>
+
+    <string name="hike_location_4_name">Deep Cove</string>
+    <string name="hike_location_4_address">2156 Banbury Rd, North Vancouver, BC V7G 2T1</string>
+    <string name="hike_location_4_description">This long, rugged trail crosses the North Shore mountains and branches off in several spots. Although some extreme hikers and runners tackle the entire length in the Knee-Knacker Race, it’s more common to choose a section of the trail to complete, such as Lynn Canyon Suspension Bridges or Black Mountain.</string>
+    <string name="hike_location_4_difficulty">Difficulty: Extreme</string>
+
+    <!-- List of data for 'Historical Monuments' [CHAR LIMIT=20] -->
+    <string name="hm_location_1_name">Brock House</string>
+    <string name="hm_location_1_address">3875 Point Grey Road</string>
+    <string name="hm_location_1_description">This Tudor Revival house was originally a private residence and at one time a Royal Canadian Mounted Police detachment. This is now a seniors activity centre, Brock House Society, and a restaurant open to the public. Brock House Restaurant stages over 200 weddings per year.</string>
+
+    <string name="hm_location_2_name">Holy Rosary Cathedral</string>
+    <string name="hm_location_2_address">646 Richards St</string>
+    <string name="hm_location_2_description">Built in 1899, this French Gothic style Roman Catholic church is a sight to behold. It stands out in Vancouver in its uniqueness from any other church in the city.</string>
+
+    <string name="hm_location_3_name">Hycroft</string>
+    <string name="hm_location_3_address">1489 McRae Ave</string>
+    <string name="hm_location_3_description">Built in 1909, this lavish mansion was once the gathering point for all of Vancouver\'s more important socialites. The owner, General Alexander Duncan McRae, often hosted extraordinary parties and later donated the property to the government of Canada. It is currently one of the most-used filming locations in Vancouver.</string>
+
+    <string name="hm_location_4_name">Hastings Mill Store</string>
+    <string name="hm_location_4_address">1575 Alma Rd</string>
+    <string name="hm_location_4_description">The oldest building in Vancouver, built in 1865, sits proudly on the shore next to Jericho Beach. The building was moved by barge from its original location. It now functions as a museum and is surrounded by a beautiful park.</string>
+
+
+    <!-- List of data for 'Restaurants' [CHAR LIMIT=20] -->
+    <string name="restaurant_location_1_name">Au Comptoir</string>
+    <string name="restaurant_location_1_address">2278 W 4th Ave, Vancouver</string>
+    <string name="restaurant_location_1_description">Take a trip to an excellent Parisian bistro by way of the city’s beachside Kitsilano neighborhood, where up-and-comer chef Dan McGee and team are whipping up French standards with B.C.’s finest produce. The stunning custom-made bar comes from France, and even the serving staff are mostly French, although with the happy addition of Canadian manners. With buttery croissants in the morning, gooey croque-monsieur at lunch, and juicy entrecôte-frites with a mouthwatering crisp char at dinner, anytime is a good time for Au Comptoir. [$$]</string>
+
+    <string name="restaurant_location_2_name">Maenam</string>
+    <string name="restaurant_location_2_address">1938 W 4th Ave, Vancouver</string>
+    <string name="restaurant_location_2_description">One of the city’s most exceptional (and hardest-working) chefs, Angus An has three other spots dotted across the city, including the noodle bliss of Fat Mao and Freebird Chicken Shack, which excels in Asian-style rotisserie. But if you only have time for one, go to Maenam to experience An’s deft flavor-balancing act of sweet, aromatic, citrus, heat, and spice, which creates plate-lickingly great Thai dishes with a B.C. twist. With terrific value, attentive service, and a killer cocktail and wine list, the restaurant is open for lunch and dinner — and is even good for takeaway to nearby Kitsilano beach. [$$]</string>
+
+    <string name="restaurant_location_3_name">Kingyo Izakaya</string>
+    <string name="restaurant_location_3_address">871 Denman St, Vancouver</string>
+    <string name="restaurant_location_3_description">Kingyo Izakaya is perfect for a quick lunch after checking out Stanley Park and English Bay, but arrive early to bag one of the deluxe bento boxes (only 10 made each day) and eat your way through the menu’s high points. At nighttime, enjoy the exuberant atmosphere and over-order from the far-too-tempting, daily-changing fresh menu. Seafood favorites such as tuna tataki shine alongside sizzling stone-grilled beef tongue and crisp chicken karaage served with three kinds of salt. [$$]</string>
+
+    <string name="restaurant_location_4_name">Golden Paramount Seafood Restaurant</string>
+    <string name="restaurant_location_4_address">8071 Park Rd, Richmond</string>
+    <string name="restaurant_location_4_description">Take a 20-minute trip on the Skytrain from downtown to the neighboring city of Richmond, which Eater’s former roving critic, Bill Addison, called “one of the cultural marvels of North America” for having some of the finest Asian food in the world. At this award-winning favorite, the dim sum is handmade by chef-owner May Chau, who focuses on Hong Kong classics: steamed pork and crab dumplings, pan-fried pork buns, and deep-fried wontons — all must-orders. [$-$$]</string>
+
 </resources>

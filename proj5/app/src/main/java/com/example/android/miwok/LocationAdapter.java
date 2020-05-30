@@ -30,16 +30,18 @@ import java.util.ArrayList;
  * {@link LocationAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
  * based on a data source, which is a list of {@link Location} objects.
  */
-public class LocationAdapter extends ArrayAdapter<Location>  {
+public class LocationAdapter extends ArrayAdapter<Location> {
 
-    /** Resource ID for the background color for this list of locations */
+    /**
+     * Resource ID for the background color for this list of locations
+     */
     private int mColorResourceId;
 
     /**
      * Create a new {@link LocationAdapter} object.
      *
-     * @param context is the current context (i.e. Activity) that the adapter is being created in.
-     * @param hikes is the list of {@link Hike}s to be displayed.
+     * @param context         is the current context (i.e. Activity) that the adapter is being created in.
+     * @param hikes           is the list of {@link Hike}s to be displayed.
      * @param colorResourceId is the resource ID for the background color for this list of hikes
      */
     public LocationAdapter(Context context, ArrayList<Location> words, int colorResourceId) {
