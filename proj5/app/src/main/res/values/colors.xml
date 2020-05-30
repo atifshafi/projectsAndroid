@@ -9,8 +9,8 @@
     <!-- Background color for app -->
     <color name="tan_background">#000000</color>
 
-    <!-- Background color for the numbers category -->
-    <color name="category_numbers">#FD8E09</color>
+    <!-- Background color for the historical monuments category -->
+    <color name="category_history">#FD8E09</color>
 
     <!-- Background color for the hiking category -->
     <color name="category_hike">#2F1B1B</color>
