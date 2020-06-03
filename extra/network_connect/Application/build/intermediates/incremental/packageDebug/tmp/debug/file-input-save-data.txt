@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Jun 02 21:48:24 PDT 2020
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\shafi\\Documents\\android\\projects\\extra\\network_connect\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.path=classes.dex
+0.set=DEX
+count=1
