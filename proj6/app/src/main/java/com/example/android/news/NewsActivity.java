@@ -41,7 +41,7 @@ public class NewsActivity extends AppCompatActivity
      * URL for news articles
      */
     private static final String TECH_REQUEST_URL =
-            "https://content.guardianapis.com/technology?page-size=30&api-key=test";
+            "https://content.guardianapis.com/technology";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.
@@ -131,6 +131,10 @@ public class NewsActivity extends AppCompatActivity
 
         Uri baseUri = Uri.parse(TECH_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
+
+        uriBuilder.appendQueryParameter("page-size", "30");
+        uriBuilder.appendQueryParameter("api-key", "test");
+        uriBuilder.appendQueryParameter("show-tags", "contributor");
 
         return new NewsLoader(this, uriBuilder.toString());
     }

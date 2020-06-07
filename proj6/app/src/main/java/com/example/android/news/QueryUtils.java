@@ -168,7 +168,6 @@ public final class QueryUtils {
         // Catch the exception so the app doesn't crash, and print the error message to the logs.
         try {
 
-
             // Create a JSONObject from the JSON response string
             JSONObject baseJsonResponse = new JSONObject(newsJSON);
 
@@ -196,9 +195,18 @@ public final class QueryUtils {
                 // Extract the value for the key called "webTitle"
                 String section_title = currentNews.getString("sectionName");
 
+                // Extracting tags
+                JSONArray tagsArray = currentNews.getJSONArray("tags");
+                JSONObject currentTag = tagsArray.getJSONObject(0);
+
+                // Extract the value for the key called "tags"
+                String author_fn = currentTag.getString("firstName");
+                String author_ln = currentTag.getString("lastName");
+                String full_name = author_fn + " " + author_ln;
+
                 // Create a new {@link News} object with the section title, date, title,
                 // and url from the JSON response.
-                News news = new News(section_title, date, title, url);
+                News news = new News(section_title, date, title, url, full_name);
 
                 // Add the new {@link News} to the list of news.
                 news_array.add(news);
@@ -216,3 +224,8 @@ public final class QueryUtils {
     }
 
 }
+
+
+
+
+

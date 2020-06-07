@@ -40,16 +40,10 @@ import java.util.List;
 public class NewsAdapter extends ArrayAdapter<News> {
 
     /**
-     * The part of the location string from the USGS service that we use to determine
-     * whether or not there is a location offset present ("5km N of Cairo, Egypt").
-     */
-    private static final String LOCATION_SEPARATOR = " of ";
-
-    /**
      * Constructs a new {@link NewsAdapter}.
      *
      * @param context of the app
-     * @param news    is the list of earthquakes, which is the data source of the adapter
+     * @param news    is the list of articles, which is the data source of the adapter
      */
     public NewsAdapter(Context context, List<News> news) {
         super(context, 0, news);
@@ -93,6 +87,14 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView articleView = (TextView) listItemView.findViewById(R.id.article_title);
         // Display the location of the current news in that TextView
         articleView.setText(article_title);
+
+        // Get author name from the News object
+        String author_name = currentNews.getAuthor();
+
+        // Find the TextView with view ID
+        TextView authorView = (TextView) listItemView.findViewById(R.id.author);
+        // Display the author of the current news in that TextView
+        authorView.setText(author_name);
 
         return listItemView;
     }
