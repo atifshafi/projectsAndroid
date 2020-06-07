@@ -41,7 +41,7 @@ public class NewsActivity extends AppCompatActivity
      * URL for news articles
      */
     private static final String TECH_REQUEST_URL =
-            "https://content.guardianapis.com/technology?api-key=test";
+            "https://content.guardianapis.com/technology?page-size=30&api-key=test";
 
     /**
      * Constant value for the news loader ID. We can choose any integer.

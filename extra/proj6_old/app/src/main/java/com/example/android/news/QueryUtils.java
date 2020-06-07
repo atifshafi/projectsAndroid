@@ -40,7 +40,9 @@ import java.util.List;
  */
 public final class QueryUtils {
 
-    /** Tag for the log messages */
+    /**
+     * Tag for the log messages
+     */
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
     /**
@@ -67,7 +69,7 @@ public final class QueryUtils {
         }
 
         // Extract relevant fields from the JSON response and create a list of {@link News}
-        List<News> news = extractFeatureFromJson(jsonResponse);
+        List<News> news = extractResultsFromJson(jsonResponse);
 
         // Return the list of {@link News}
         return news;
@@ -152,7 +154,7 @@ public final class QueryUtils {
      * Return a list of {@link News} objects that has been built up from
      * parsing the given JSON response.
      */
-    private static List<News> extractFeatureFromJson(String newsJSON) {
+    private static List<News> extractResultsFromJson(String newsJSON) {
         // If the JSON string is empty or null, then return early.
         if (TextUtils.isEmpty(newsJSON)) {
             return null;
@@ -182,15 +184,11 @@ public final class QueryUtils {
                 // Get a single news at position i within the list of news
                 JSONObject currentNews = resultsArray.getJSONObject(i);
 
-//                // For a given news, extract the JSONObject associated with the
-//                // key called "results", which represents a list of all attributes
-//                // for that news.
-
                 // Extract the value for the key called "webPublicationDate"
-                String magnitude = currentNews.getString("webPublicationDate");
+                String date = currentNews.getString("webPublicationDate");
 
                 // Extract the value for the key called "webTitle"
-                String location = currentNews.getString("webTitle");
+                String title = currentNews.getString("webTitle");
 
                 // Extract the value for the key called "webUrl"
                 String url = currentNews.getString("webUrl");
@@ -198,9 +196,9 @@ public final class QueryUtils {
                 // Extract the value for the key called "webTitle"
                 String section_title = currentNews.getString("sectionName");
 
-                // Create a new {@link News} object with the magnitude, location, time,
+                // Create a new {@link News} object with the section title, date, title,
                 // and url from the JSON response.
-                News news = new News(section_title, magnitude, location, url);
+                News news = new News(section_title, date, title, url);
 
                 // Add the new {@link News} to the list of news.
                 news_array.add(news);

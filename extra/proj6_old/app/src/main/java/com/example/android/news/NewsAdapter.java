@@ -16,22 +16,18 @@
 package com.example.android.news;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.android.news.News;
-import com.example.android.news.R;
-
 import java.util.List;
 
 /**
  * An {@link NewsAdapter} knows how to create a list item layout for each news
  * in the data source (a list of {@link News} objects).
- *
+ * <p>
  * These list item layouts will be provided to an adapter view like ListView
  * to be displayed to the user.
  */
@@ -45,11 +41,10 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
     /**
      * Constructs a new {@link NewsAdapter}.
-     *
-     * @param context of the app
-     * @param news is the list of earthquakes, which is the data source of the adapter
+     *  @param context of the app
+     * @param news    is the list of earthquakes, which is the data source of the adapter
      */
-    public NewsAdapter(Context context, List<News> news) {
+    public NewsAdapter(TechFragment context, List<News> news) {
         super(context, 0, news);
     }
 
@@ -79,14 +74,12 @@ public class NewsAdapter extends ArrayAdapter<News> {
         sectionView.setText(section_title);
 
 
-        String date_time = currentNews.getDate();
-        // Find the TextView with view ID magnitude
+        String date_time = currentNews.getDate().substring(0, 10);
+        // Find the TextView with view ID date
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.date);
-        magnitudeView.setText("Published date: " + date_time.substring(0, 10));
+        magnitudeView.setText(date_time);
 
-
-        // Get the original location string from the News object,
-        // which can be in the format of "5km N of Cairo, Egypt" or "Pacific-Antarctic Ridge".
+        // Get the original title string from the News object,
         String article_title = currentNews.getTitle();
 
         // Find the TextView with view ID location

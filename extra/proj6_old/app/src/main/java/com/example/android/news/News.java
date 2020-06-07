@@ -20,24 +20,32 @@ package com.example.android.news;
  */
 public class News {
 
-    /** Name of the section */
+    /**
+     * Name of the section
+     */
     private String mSection;
 
-    /** Magnitude of the earthquake */
+    /**
+     * Magnitude of the earthquake
+     */
     private String mDate;
 
-    /** Name of the title */
+    /**
+     * Name of the title
+     */
     private String mTitle;
 
-    /** Website URL of the earthquake */
+    /**
+     * Website URL of the earthquake
+     */
     private String mUrl;
 
     /**
      * Constructs a new {@link News} object.
      *
-     * @param date is the magnitude (size) of the earthquake
+     * @param date  is the magnitude (size) of the earthquake
      * @param title is the location where the earthquake happened
-     * @param url is the website URL to find more details about the earthquake
+     * @param url   is the website URL to find more details about the earthquake
      */
     public News(String section, String date, String title, String url) {
         mSection = section;
@@ -48,6 +56,7 @@ public class News {
 
     /**
      * Returns the name of the section.
+     *
      * @return
      */
     public String getSection() {
@@ -56,6 +65,7 @@ public class News {
 
     /**
      * Returns date of the publication.
+     *
      * @return
      */
     public String getDate() {
